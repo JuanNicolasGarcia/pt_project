@@ -7,7 +7,6 @@ class User < ApplicationRecord
   def admin?
   	return role_id == 99
   end
-
 end
 
 

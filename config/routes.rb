@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  get '/', to: "home#index"
+  get '/', to: "home#getstarted"
   get 'home/index'
+
+  get '/getstarted', to: "home#getstarted"
+
+  get '/index', to: "home#index"
+
+
 
   devise_for :users
   get "/admin/index", to: "admin#index"
