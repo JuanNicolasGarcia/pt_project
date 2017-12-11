@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Firstname:</strong>
+  <strong>First Name:</strong>
   <%= @patient.FirstName %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Last Name:</strong>
   <%= @patient.LastName %>
 </p>
 
 <p>
-  <strong>Dateofbirth:</strong>
+  <strong>Date of Birth:</strong>
   <%= @patient.DateOfBirth %>
+</p>
+
+<p>
+  <strong>Assigned PT:</strong>
+  <%= @patient.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |

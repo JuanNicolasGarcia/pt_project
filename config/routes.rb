@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :patients
+
   get '/', to: "home#getstarted"
   get 'home/index'
 
@@ -7,6 +8,9 @@ Rails.application.routes.draw do
 
   get '/index', to: "home#index"
 
+  get '/schedule', to: "home#schedule"
+
+  get '/patients', to: "patients#index"
 
 
   devise_for :users

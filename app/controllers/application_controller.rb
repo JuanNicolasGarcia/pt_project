@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+ 	def index
+		@users = User.all
+	end
+
   protected
 
   def after_sign_in_path_for(resource_or_scope)
@@ -14,8 +18,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname, :role_id])
   end
-
-
 
   protect_from_forgery with: :exception
 end

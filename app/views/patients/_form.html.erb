@@ -12,18 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :FirstName %>
+    <%= form.label "First Name" %>
     <%= form.text_field :FirstName, id: :patient_FirstName %>
   </div>
 
   <div class="field">
-    <%= form.label :LastName %>
+    <%= form.label "Last Name" %>
     <%= form.text_field :LastName, id: :patient_LastName %>
   </div>
 
   <div class="field">
-    <%= form.label :DateOfBirth %>
+    <%= form.label "Date of Birth" %>
     <%= form.text_field :DateOfBirth, id: :patient_DateOfBirth %>
+  </div>
+
+   <div class="field">
+    <%= form.label "Assigned User" %>
+    <%= form.text_field :user_id, id: :patient_user_id %>
   </div>
 
   <div class="actions">
