@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :patients
   get '/', to: "home#getstarted"
   get 'home/index'
 
