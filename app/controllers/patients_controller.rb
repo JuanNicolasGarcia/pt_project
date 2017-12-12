@@ -14,16 +14,19 @@ class PatientsController < ApplicationController
 
   # GET /patients/new
   def new
+    @users = User.all
     @patient = Patient.new
   end
 
   # GET /patients/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /patients
   # POST /patients.json
   def create
+    @users = User.all
     @patient = Patient.new(patient_params)
 
     respond_to do |format|
@@ -40,6 +43,7 @@ class PatientsController < ApplicationController
   # PATCH/PUT /patients/1
   # PATCH/PUT /patients/1.json
   def update
+    @users = User.all
     respond_to do |format|
       if @patient.update(patient_params)
         format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }

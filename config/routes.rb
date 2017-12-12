@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   resources :patients
+  resources :therapists, only: [:index, :show]
 
   get '/', to: "home#getstarted"
   get 'home/index'
 
   get '/getstarted', to: "home#getstarted"
 
-  get '/index', to: "home#index"
+  get '/index', to: "therapists#index"
 
   get '/schedule', to: "home#schedule"
 

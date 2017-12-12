@@ -28,7 +28,7 @@
 
    <div class="field">
     <%= form.label "Assigned User" %>
-    <%= form.text_field :user_id, id: :patient_user_id %>
+    <%= form.collection_select :user_id, User.all, :id, :email %>
   </div>
 
   <div class="actions">

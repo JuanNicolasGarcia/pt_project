@@ -3,9 +3,6 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="/index">Overview <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="/index">View Therapists</a>
             </li>
             <li class="nav-item">
@@ -38,7 +35,7 @@
               <div class="col-6 col-sm-3 placeholder">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
                 <h4><%= user.firstname %> <%= user.lastname %></h4>
-                <a href="/schedule" class="btn btn-outline-info" action>View Schedule</a>
+                <a href="/therapists/<%= user.id %>" class="btn btn-outline-info" action>View Patients</a>
               </div>   
             <% end %>
 
