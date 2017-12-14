@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   	if current_user.admin?
   		"/index"
   	else
-  		"/schedule"
+  		"/index"
   	end
   end
 
